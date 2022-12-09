@@ -1,0 +1,94 @@
+body {
+	font-color:#484848;
+	font-size: 14px;
+	font-family:Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/*
+ NavBar css disposition
+*/
+.menu-deep {
+    margin-left: 50px !important;
+}
+
+.menu-deep-right{
+    margin-right: 50px !important;
+}
+
+.cover{
+    height: 800px;
+    width: 100%;
+    background: url("../../assets/images/back-1.png");
+}
+
+.uk-navbar-sticky {
+    background-color: white!important;
+}
+
+/*
+ Heading css disposition
+*/
+
+.title{
+    font-family: "zantrokeregular", serif;
+    color: white;
+    margin-left: 6% !important;
+    margin-top: 150px !important;
+    font-size: 4.5rem !important;
+    font-weight: 700 !important;
+}
+
+.title span{
+    color: #0475b8;
+}
+
+.subtitle{
+    color: white;
+    margin-left: 6% !important;
+}
+
+.uk-button{
+    margin: 0 0 0 6% !important;
+}
+
+/*
+ Features section css disposition
+*/
+
+.section {
+
+    width: 100% !important;
+    height: 1000px !important;
+    background-color: white !important;
+}
+
+.feat {
+    margin-top: 3% !important;
+    font-size: 0.875em;
+    font-weight: 700 !important;
+    color: #0475b8;
+}
+
+.last-hact {
+    height: 80px !important;
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    background-color:#04081e;
+    flex-direction: row;
+}
+
+.last-hact 
+.uk-container 
+.uk-grid-match > div > h4{
+    color: #fff !important;
+    text-transform: uppercase;
+}
+
+.deep-icon {
+    height: 50px;
+    width: 50px !important;
+    background-color: white;
+    align-items: center;
+
+}
