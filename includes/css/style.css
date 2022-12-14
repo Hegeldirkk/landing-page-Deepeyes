@@ -22,7 +22,11 @@ body {
 }
 
 .uk-navbar-sticky {
-    background-color: white!important;
+    background-color: #04081e!important;
+}
+
+.uk-navbar-sticky .menu-deep .uk-navbar-nav {
+    color: #fff !important;
 }
 
 /*
@@ -51,38 +55,58 @@ body {
     margin: 0 0 0 6% !important;
 }
 
+.ok {
+    background-color: #0475b8 !important;
+    border: none;
+    color: #fff !important;
+}
+
 /*
  Features section css disposition
 */
 
 .section {
-
     width: 100% !important;
-    height: 1000px !important;
-    background-color: white !important;
+    height: 550px !important;
+    //background-color: white !important;
+   // background-image: url('../../assets/images/25332.jpg') !important;
+    display: inline-block !important;
 }
 
 .feat {
     margin-top: 3% !important;
-    font-size: 0.875em;
+    font-size: 1.175em;
     font-weight: 700 !important;
     color: #0475b8;
 }
 
 .last-hact {
-    height: 80px !important;
+    height: 40px !important;
     width: 100% !important;
     display: flex;
     align-items: center;
-    background-color:#04081e;
+    background-color:#0475b8;
     flex-direction: row;
 }
 
-.last-hact 
-.uk-container 
-.uk-grid-match > div > h4{
+.last-hact h4{
     color: #fff !important;
     text-transform: uppercase;
+    font-weight: 600 !important;
+    font-size: 1.175em;
+    position: relative;
+    top: 9px;
+    left: 10%;
+    
+}
+
+.last-hact p {
+    color: #FF6900 !important;
+    font-weight: 400 !important;
+    font-size: 1.075em;
+    position: relative;
+    top: 9px;
+    left: 10%;
 }
 
 .deep-icon {
@@ -91,4 +115,130 @@ body {
     background-color: white;
     align-items: center;
 
+}
+
+.load{
+    border: dashed #0475b8;
+    border-radius: 50% !important;
+    height: 60px !important;
+    width: 60px;
+}
+
+.load1{
+    border: dashed #FF6900;
+    border-radius: 50% !important;
+    height: 60px !important;
+    width: 60px;
+}
+
+.load2{
+    border: dashed #04081e;
+    border-radius: 50% !important;
+    height: 60px !important;
+    width: 60px;
+}
+
+.card1 h3 {
+    color: #0475b8 !important;
+    font-weight: 600 !important;
+}
+
+.card2 h3 {
+    color: #FF6900 !important;
+    font-weight: 600 !important;
+}
+
+.card3 h3 {
+    color: #04081e !important;
+    font-weight: 600 !important;
+}
+
+.subtitle1 {
+    color: #161c2d !important;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 700 !important;
+}
+
+            /* */
+section .uk-container .card3:hover{
+    background-color: #FF6900 !important;
+    color: white;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+section .uk-container .card2:hover{
+    background-color: #0475b8 !important;
+    color: white;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+} 
+
+section .uk-container .card1:hover{
+    background-color: #04081e !important;
+    color: white;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+} 
+
+span:hover {
+    color: white !important;
+    size: 10px;
+}
+
+section .uk-container .card1:hover > .send{
+    background-color: #FEE5E6;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    left: 42%;
+    border-radius: 70%;
+}
+
+section .uk-container .card3:hover > .send {
+    background-color: #FEE5E6;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    left: 42%;
+    border-radius: 70%;
+}
+
+section .uk-container .card2:hover > .send {
+    background-color: #FEE5E6;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    left: 42%;
+    border-radius: 70%;
+}
+
+/*
+section 2
+*/
+
+.section2 {
+    width: 100% !important;
+    height: 500px !important;
+    background-color: #FF6900 !important;
+   // background-image: url('../../assets/images/25332.jpg') !important;
+    display: inline-block !important;
+    border-top-left-radius: 35% 40%;
+}
+
+.pattern {
+    position: absolute;
+    top: 25%;
+    right: 19px;
+}
+
+.section2 .feat {
+    display: inline-block !important;
+    position: absolute;
+    color: white !important;
+}
+
+.subtitle2 {
+    color: #fff !important;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 700 !important;
 }
