@@ -97,11 +97,11 @@ body {
     position: relative;
     top: 9px;
     left: 10%;
-    
+    font-family: "Trebuchet MS", Verdana, sans-serif;
 }
 
 .last-hact p {
-    color: #FF6900 !important;
+    color: #04081e !important;
     font-weight: 400 !important;
     font-size: 1.075em;
     position: relative;
@@ -217,11 +217,11 @@ section 2
 
 .section2 {
     width: 100% !important;
-    height: 500px !important;
+    height: 1000px !important;
     background-color: #FF6900 !important;
    // background-image: url('../../assets/images/25332.jpg') !important;
     display: inline-block !important;
-    border-top-left-radius: 35% 40%;
+    //border-top-left-radius: 19% 40%;
 }
 
 .pattern {
@@ -241,4 +241,45 @@ section 2
     font-size: 2rem;
     line-height: 1.2;
     font-weight: 700 !important;
+    position: absolute;
+    top: 60px !important;
+}
+
+.descrip {
+    color: #fff !important;
+    width: 60% !important;
+    font-size: 1.3rem;
+    font-weight: 200 !important;
+    position: absolute;
+    top: 120px !important;
+    font-family: arial;
+}
+
+.profil{
+    top: 50% !important;
+    position: relative;
+    display: flex;
+}
+
+.profile1{
+    width: 250px !important;
+    margin-left: 15% !important;
+}
+
+.profile1 > img{
+    height: 100px;
+    width: 100px !important;
+    align-items: center !important;
+    border-radius: 50% !important;
+    background-color: #fff !important
+}
+
+.profile1 h2 {
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    color:#04081e;
+}
+
+.profile1 p {
+    color: #fff !important;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
 }
