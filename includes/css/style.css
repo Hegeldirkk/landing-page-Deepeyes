@@ -221,12 +221,24 @@ section 2
     background-color: #FF6900 !important;
    // background-image: url('../../assets/images/25332.jpg') !important;
     display: inline-block !important;
-    border-end-start-radius: 70%;
-    writing-mode: vertical-rl;
+    border-top-left-radius: 35% 40%;
 }
 
 .pattern {
     position: absolute;
     top: 25%;
     right: 19px;
+}
+
+.section2 .feat {
+    display: inline-block !important;
+    position: absolute;
+    color: white !important;
+}
+
+.subtitle2 {
+    color: #fff !important;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 700 !important;
 }
