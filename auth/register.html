@@ -1,13 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>  
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
+<!-- partial:index.partial.html -->
+<div class="box-form">
+	<div class="left">
+		<div class="overlay">
+		<h1>Sign<br>
+			Up</h1>
+		<p><br><br>Welcome to DeepEyes 
+		<br>Kindly sign up here</p>
+		<span>
+			<p>Login with your socials</p>
+			<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+		</span>
+		</div>
+	</div>	
+		<div class="right">
+		<h5>Sign Up</h5>
+		<p>Already have an account? <a href="#">Login</a></p>
+		<!-- <div class="inputs">
+			<input type="text" placeholder="Username">
+			<br>
+			<input type="Password" placeholder="Password">
+		</div> -->
+		<div class="inputs">
+			<input type="text" placeholder="Username">
+			<br>
+			<input type="text" placeholder="Email">
+			<br>
+			<input type="Password" placeholder="Password">
+		</div>		
+			<br>
+			<button>Login</button>
+		<!-- <div class="inputs">
+		        <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" />
+              
+                <label for="email">Email:</label>
+                <input type="email" id="email" />
+              
+                <label for="password">Password:</label>
+                <input type="password" id="password" />
+              
+                <button type="submit">Sign Up</button>
+              </form> -->
+		</div>
+			<br><br>
+			
+		<div class="remember-me--forget-password">
+				<!-- Angular -->
+	
+	</div>
+	
+</div>
+<!-- partial -->
+
+ 
 </body>
 </html>
+
+<!-- Add some JavaScript to validate the form input -->
+<script>
+	const form = document.querySelector('form');
+	
+	form.addEventListener('submit', (event) => {
+	  // Prevent the form from submitting
+	  event.preventDefault();
+	
+	  // Get the input values
+	  const username = document.querySelector('#username').value;
+	  const email = document.querySelector('#email').value;
+	  const password = document.querySelector('#password').value;
+	
+	  // Validate the input values
+	  if (username === '' || email === '' || password === '') {
+		alert('Please fill out all the fields.');
+	  } else {
+		// Submit the form
+		form.submit();
+	  }
+	});

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Add some styling to the page */
+body {
+  font-family: sans-serif;
+}
+
+form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 8px;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
+}
+</style>
+</head>
+<body>
+
+<!-- Create the form for the sign up page -->
+<form>
+  <h1>Sign Up</h1>
+  <label for="username">Username:</label>
+  <input type="text" id="username" />
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" />
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" />
+
+  <button type="submit">Sign Up</button>
+</form>
+
+<!-- Add some JavaScript to validate the form input -->
+<script>
+const form = document.querySelector('form');
+
+form.addEventListener('submit', (event) => {
+  // Prevent the form from submitting
+  event.preventDefault();
+
+  // Get the input values
+  const username = document.querySelector('#username').value;
+  const email = document.querySelector('#email').value;
+  const password = document.querySelector('#password').value;
+
+  // Validate the input values
+  if (username === '' || email === '' || password === '') {
+    alert('Please fill out all the fields.');
+  } else {
+    // Submit the form
+    form.submit();
+  }
+});
