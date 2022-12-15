@@ -18,6 +18,7 @@ body {
 .cover{
     height: 800px;
     width: 100%;
+    max-width: 100%;
     background: url("../../assets/images/back-1.png");
 }
 
@@ -38,7 +39,8 @@ body {
     color: white;
     margin-left: 6% !important;
     margin-top: 150px !important;
-    font-size: 4.5rem !important;
+    font-size:7vw;
+    //font-size: 4.5rem !important;
     font-weight: 700 !important;
 }
 
@@ -67,7 +69,7 @@ body {
 
 .section {
     width: 100% !important;
-    height: 550px !important;
+    height: 100% !important;
     //background-color: white !important;
    // background-image: url('../../assets/images/25332.jpg') !important;
     display: inline-block !important;
@@ -81,7 +83,7 @@ body {
 }
 
 .last-hact {
-    height: 40px !important;
+    height: 10% !important;
     width: 100% !important;
     display: flex;
     align-items: center;
@@ -93,7 +95,7 @@ body {
     color: #fff !important;
     text-transform: uppercase;
     font-weight: 600 !important;
-    font-size: 1.175em;
+    font-size: 1vw;
     position: relative;
     top: 9px;
     left: 10%;
@@ -103,7 +105,7 @@ body {
 .last-hact p {
     color: #04081e !important;
     font-weight: 400 !important;
-    font-size: 1.075em;
+    font-size: 1.3vw;
     position: relative;
     top: 9px;
     left: 10%;
@@ -216,8 +218,9 @@ section 2
 */
 
 .section2 {
+    margin-top: 50px;
     width: 100% !important;
-    height: 1000px !important;
+    height: 100% !important;
     background-color: #FF6900 !important;
    // background-image: url('../../assets/images/25332.jpg') !important;
     display: inline-block !important;
@@ -237,6 +240,7 @@ section 2
 }
 
 .subtitle2 {
+    display: inline-block !important;
     color: #fff !important;
     font-size: 2rem;
     line-height: 1.2;
@@ -256,15 +260,13 @@ section 2
 }
 
 .profil{
-    top: 50% !important;
+    margin-top: 480px;
+    //top: 100% !important;
     position: relative;
     display: flex;
 }
 
-.profile1{
-    width: 250px !important;
-    margin-left: 15% !important;
-}
+
 
 .profile1 > img{
     height: 100px;
@@ -282,4 +284,68 @@ section 2
 .profile1 p {
     color: #fff !important;
     font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+
+.profile2 > img{
+    height: 100px;
+    width: 100px !important;
+    align-items: center !important;
+    border-radius: 50% !important;
+    background-color: #fff !important
+}
+
+.profile2 h2 {
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    color:#04081e;
+}
+
+.profile2 p {
+    color: #fff !important;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+
+
+.profile3 > img{
+    height: 100px;
+    width: 100px !important;
+    align-items: center !important;
+    border-radius: 50% !important;
+    background-color: #fff !important
+}
+
+.profile3 h2 {
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    color:#04081e;
+}
+
+.profile3 p {
+    color: #fff !important;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+/*
+
+*/
+
+@media screen and (max-width: 800px) {
+    .last-hack h4, .last-hack p {
+        width:  100%;
+    }
+    .section{
+        height: 100%;
+    }
+    .descrip{
+        font-size: 0.8rem;
+        //margin-top: 0.5rem;
+    }
+    .subtitle2 {
+        font-size: 1rem;
+    }
+    .profile1, .profile2, .profile3 {
+        width:100% !important;
+    }
+
+    .section2 {
+       height: 1300px;
+    }
 }
