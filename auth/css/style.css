@@ -18,8 +18,10 @@ body {
     align-items: stretch;
     justify-content: space-between;
     box-shadow: 0 0 20px 6px #090b6f85;
+    margin-top: 50px;
+    margin-bottom: 10px;
   }
-  @media (max-width: 980px) {
+  @media (max-width: 700px) {
     .box-form {
       flex-flow: wrap;
       text-align: center;
@@ -79,7 +81,9 @@ body {
     }
   }
   .box-form .right h5 {
-    font-size: 6vmax;
+    margin-top: 150px;
+    margin-bottom: 90px;
+    font-size: 4vmax;
     line-height: 0;
   }
   .box-form .right p {
@@ -161,4 +165,9 @@ body {
   
   label input[type="checkbox"] {
     display: none;
+  }
+  
+  @media only screen and (max-width:700px){
+
+
   }
