@@ -117,8 +117,12 @@ body {
     display: inline-block;
     border: 0;
     outline: 0;
-    box-shadow: 0px 4px 20px 0px #49c628a6;
-    background-image: linear-gradient(135deg, #70F570 10%, #49C628 100%);
+    box-shadow: 0px 4px 60px 0px grey;
+    background-image: linear-gradient(135deg, #04081e 10%, #04081e 100%);
+  }
+
+  .box-form .right button:hover{
+    background-image: linear-gradient(135deg, #FF6900 10%, #FF6900 100%);
   }
   
   label {
@@ -132,7 +136,7 @@ body {
     position: absolute;
     font-family: FontAwesome;
     background: transparent;
-    border: 3px solid #70F570;
+    border: 3px solid #FF6900;
     border-radius: 4px;
     color: transparent;
     left: -30px;
@@ -144,11 +148,11 @@ body {
     content: ' \f00c';
     color: #fff;
     cursor: pointer;
-    background: #70F570;
+    background: #FF6900;
   }
   
   label:hover::before .text-checkbox {
-    background: #70F570;
+    background: #FF6900;
   }
   
   label span.text-checkbox {
