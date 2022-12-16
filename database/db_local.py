@@ -23,7 +23,7 @@ app = Flask(__name__)
 # and the database username is the default, 'root'
 # change if necessary
 username = 'userDeepeyes'
-password = 'Mysql2022!'
+password = ''
 userpass = 'mysql+pymysql://' + username + ':' + password + '@'
 server  = '127.0.0.7'
 # change to YOUR database name, with a slash added as shown
