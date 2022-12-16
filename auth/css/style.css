@@ -18,6 +18,8 @@ body {
     align-items: stretch;
     justify-content: space-between;
     box-shadow: 0 0 20px 6px #090b6f85;
+    margin-top: 60px;
+
   }
   @media (max-width: 980px) {
     .box-form {
