@@ -19,6 +19,9 @@ from flask import Flask, abort, request, jsonify, g, url_for, make_response
 from flask_httpauth import HTTPBasicAuth
 from itsdangerous import (TimedJSONWebSignatureSerializer
                           as Serializer, BadSignature, SignatureExpired)
+import json
+from bson import json_util
+from sqlalchemy_serializer import SerializerMixin
 
 app = Flask(__name__)
 
@@ -47,8 +50,11 @@ auth = HTTPBasicAuth()
 
 # NOTHING BELOW THIS LINE NEEDS TO CHANGE
 # this route will test the database connection and nothing more
-class Hacker(db.Model):
+class Hacker(db.Model, SerializerMixin):
     __tablename__ = 'hacker'
+
+    serialize_only = ('id', 'username', 'email', 'H_password')
+
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100), unique=True, nullable=False)
     email = db.Column(db.String(80), unique=True, nullable=False)
@@ -59,7 +65,7 @@ class Hacker(db.Model):
                            server_default=func.now())
 
     def __repr__(self):
-        return '<Hacker %r>' % self.username
+        return repr({'error': 'false', 'id': self.id, 'username': self.username})#'<Hacker %r>' % self.username
 
     def hash_passwd(self, password):
         self.H_password = pwd_context.encrypt(password)
@@ -67,7 +73,7 @@ class Hacker(db.Model):
     def verify_password(self, password):
         return pwd_context.verify(password, self.H_password)
 
-    def generate_auth_token(self, expiration=600):
+    def generate_auth_token(self, expiration=1000):
         s = Serializer(app.config['SECRET_KEY'], expires_in=expiration)
         return s.dumps({'id': self.id})
 
@@ -201,16 +207,16 @@ def get_user(id):
 @app.route('/api/hacker/login')
 @auth.login_required
 def get_auth_token():
-    token = g.user.generate_auth_token(600)
-    data = {'error': 'false','token': token.decode('ascii'), 'duration': 600}
+    token = g.user.generate_auth_token(1000)
+    data = {'error': 'false','token': token.decode('ascii'), 'duration': 1000}
     return jsonify(data)
 
 @app.route('/api/hacker/info')
 @auth.login_required
 def get_resource():
-    data = {'error': 'false', 'data': g.user}
+    #result = Hacker(g.user)
+    data = {'error': 'false', 'data': g.user.to_dict()}
     return jsonify(data)
-
 
 @app.route('/')
 def testdb():
